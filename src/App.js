@@ -1,35 +1,37 @@
-import React from "react";
-import { isElementOfType } from 'react-dom/test-utils';
+import axios from "axios";
+import React, { createContext, useContext, useEffect, useState } from "react";
 import './App.css';
+import PostList from "./PostList";
+import PostDetail from "./PostDetail";
+import {PostStoreProvider} from "./PostStore";
 
-const PostList = () =>{
-  return <div></div>
-}
+// create context for storing data
 
-const PostDetail = () =>{
-  return <div></div>
-}
+
+
+
 
 function App() {
+  
   return (
+    <PostStoreProvider>
     <div className = "container listItembox">
     <div className="row">
       <section className="col-md">
       <ul className="list-group">
-      <li className="list-group-item">
-            <h1>list item</h1>
-          </li>
+       <PostList/>
       
     </ul>
       </section >
       <section className="col-md box" >
         <div className="row">
-          <h1>list detail</h1>
+          <PostDetail/>
         </div>
       </section>
     </div>
 
   </div>
+  </PostStoreProvider>
   );
 }
 
