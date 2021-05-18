@@ -2,6 +2,14 @@ import React from "react";
 import { isElementOfType } from 'react-dom/test-utils';
 import './App.css';
 
+const PostList = () =>{
+  return <div></div>
+}
+
+const PostDetail = () =>{
+  return <div></div>
+}
+
 function App() {
   return (
     <div className = "container listItembox">
