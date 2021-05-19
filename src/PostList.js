@@ -12,7 +12,7 @@ const PostList = () =>{
           return(
         <li key={i} className="list-group-item" onClick={()=>{
             data.setSelectedPostId(postitem.items)
-            console.log(postitem.items);
+           // console.log(postitem.items);
 
         }}>
         {postitem.items}

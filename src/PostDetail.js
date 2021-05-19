@@ -10,25 +10,36 @@ const PostDetail = () =>{
         console.log("empty ha");
     }
     else{
-        data.postList.map((postitem)=>{
-            if(data.selectedPostId === postitem.items){
-                setPostDetail(postitem);
-            }
-             });
+       // data.postList.map((postitem)=>{
+           // console.log(postitem.items)
+       //     if(data.selectedPostId === postitem.items){
+       //         console.log(postitem.items)
+              //  setPostDetail(postitem);
+        //    }
+        //     });
     }
     
+   
     
-    if (postDetail === null)
+    if (data.selectedPostId=== null)//postDetail === null)
     {
         return <div> No Data Selected</div>
     }
 
     return( <div>
-        <div>{postDetail.items}</div>
-        <div>{postDetail.price}</div>
-        <div>{postDetail.quantity}</div>
-        <div>{postDetail.description}</div>
+        { data.postList.map((postitem)=>{
+            console.log("running")
+            if(data.selectedPostId === postitem.items)
+            {
+                console.log(postitem.items);
 
+                return(
+                    <h1>{postitem.quantit}</h1>
+                );
+            }
+        })
+    }
+       
     </div>
     );
   }
